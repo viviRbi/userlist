@@ -1,14 +1,15 @@
 <?php 
+    // require_once "define.php";
     require_once "Database.class.php";
     require_once "search_helper.php";
     require_once "paginator_helper.php";
-    
+
     $params = array (
-        'server' 	=> 'localhost',
-		'username'	=> 'root',
-		'password'	=> '',
-		'database'	=> 'php_ex_12',
-		'table'		=> 'users',
+        'server' 	=> $DB_SERVER,
+		'username'	=> $DB_USENAME,
+		'password'	=> $DB_PASSWORD,
+		'database'	=> $DB_NAME,
+		'table'		=> $DB_TABLE,
     );
     // Insert data-------------------------------------
     // $addin = array('name'=>'Member33', 'status' => 1, 'ordering' => 19);

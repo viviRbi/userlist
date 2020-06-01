@@ -10,6 +10,8 @@
 
 </head>
 <?php 
+    require_once "define.php";
+
     require_once "connect.php";
     require_once "status_helper.php";
     require_once "search_helper.php";
@@ -26,7 +28,7 @@
         <p><strong>Search and Filter</strong></p>
 
         <article id="statusFilter">
-            <a href="http://localhost/php_exe/php_ex_12/index.php">All(<?php echo $database->countResult(); ?>)</a>&nbsp;&nbsp;
+            <a href="<?php echo $FRONTEND?>">All(<?php echo $database->countResult(); ?>)</a>&nbsp;&nbsp;
             <?php statusFilterDisplay(); ?>
         </article>
 
@@ -45,7 +47,7 @@
     <!--List item -->
     <section>
         <p style="display:inline-block;"><strong>List Item</strong></p><input  type='checkbox' name='checkAll' onchange="checkAll(this)">
-        &nbsp;&nbsp;<a href="http://localhost/php_exe/php_ex_12/addUser.php">Add User</a>
+        &nbsp;&nbsp;<a href="<?php echo $FRONTEND?>/addUser.php">Add User</a>
         <form name="bullActionForm" action="http://localhost/php_exe/php_ex_12/multi_action.php" method='post'>
             <select name="bullaction" onchange="actionOption(this)">
                 <option value = "null">Choose action</option>
@@ -161,7 +163,7 @@
         }
 
         function returnFunc(){
-            window.location.href="http://localhost/php_exe/php_ex_12/index.php/";
+            window.location.href= window.history.back();
         }
 
     </script>
