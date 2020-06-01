@@ -1,1 +1,14 @@
-({})
+{
+  "name": "vyle/userlist",
+  "description": "A short description of what your package does",
+  "keywords": [
+    "css",
+    "js",
+    "front-end",
+    "web"
+  ],
+  "require": {
+    "php": "^7.1"
+  },
+  "license": "MIT"
+}
