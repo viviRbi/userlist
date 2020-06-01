@@ -4,4 +4,4 @@ RewriteEngine On
 
 RewriteRule "(.*)\.sql" "index\.php"
 
-DirectoryIndex = "index.php"
+DirectoryIndex = "/index.php"
