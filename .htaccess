@@ -3,3 +3,4 @@ IndexIgnore *.sql
 RewriteEngine On
 
 RewriteRule "(.*)\.sql" "index\.php"
+

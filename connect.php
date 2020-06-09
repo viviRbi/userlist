@@ -11,17 +11,18 @@
 		'database'	=> $DB_NAME,
 		'table'		=> $DB_TABLE,
     );
-    // Insert data-------------------------------------
-    // $addin = array('name'=>'Member33', 'status' => 1, 'ordering' => 19);
 
-    // Update data-------------------------------------
-    // $update = array(
-    //     'name' => 'Member2',
-    //     'status' => 0
+    // If import data.sql to localhost
+    
+    // $params = array (
+    //     'server' 	=> "localhost",
+	// 	'username'	=> "user",
+	// 	'password'	=> "",
+	// 	'database'	=> "php_ex_12",
+	// 	'table'		=> "users"
     // );
-    $database = new Database($params);
 
-    echo $limitStart;
+    $database = new Database($params);
 
     $list = $database->listRecord("SELECT * FROM `$params[table]` LIMIT $limitStart,$totalUsersPerPage");
     // $status = $database->listRecord("SELECT DISTINCT `status` FROM `$params[table]`");

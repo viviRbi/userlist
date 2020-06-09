@@ -18,6 +18,10 @@
     require_once "usersList_helper.php";
     require_once "Paginator.class.php";
     require_once "paginator_helper.php";
+
+    chmod("/addUser.php",777);
+    chmod("/editUser.php",777);
+    chmod("/deleteUser.php",777);
 ?>
 <body>
     
@@ -93,17 +97,19 @@
                 $totalUsers = $database->countResult();
             }
             
-            // get other Query
+            // // get other Query
        
             orderList("id");
             orderList("name");
             orderList("order");
+            orderList("status");
       
             if (isset($_GET['search'])){
                 orderList("search");
                 $type = "search";
                 $totalUsers= $database->countResult("`name` LIKE '%$searchWord%'");
             }
+
             ?>
             <!-- <form id="form2" name='checkEachForm' action="http://localhost/php_exe/php_ex_12/multi_action.php" method='post'> -->
                 <?php echo usersList($type); ?>

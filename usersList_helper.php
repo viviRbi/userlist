@@ -8,10 +8,10 @@ function urlQuery($query){
     global $FRONTEND;
     if (isset($_SERVER['QUERY_STRING'])){
         if ($_SERVER['QUERY_STRING'] == "$query-list=asc"){
-            echo "href='$FRONTEND/index.php?$query-list=asc'";
+            echo "href='$FRONTEND/index.php?$query-list=desc'";
 
         } elseif($_SERVER['QUERY_STRING'] == "$query-list=desc") {
-            echo "href='$FRONTEND/index.php?$query-list=desc'";
+            echo "href='$FRONTEND/index.php?$query-list=asc'";
 
         } elseif(strpos($_SERVER['QUERY_STRING'], "$query-list") == false) {
             echo "href='$FRONTEND/index.php?$query-list=asc'";
