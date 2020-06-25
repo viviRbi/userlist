@@ -102,7 +102,6 @@
             orderList("id");
             orderList("name");
             orderList("order");
-            orderList("status");
       
             if (isset($_GET['search'])){
                 orderList("search");

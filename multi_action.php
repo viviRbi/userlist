@@ -14,7 +14,7 @@
                 $database->update($updateToArr,$value);
             }
         }
-        header("Location: http://localhost/php_exe/php_ex_12/index.php");
+        header("Location: $FRONTEND/index.php");
     }
   
 ?>
