@@ -1,4 +1,7 @@
 -- Databasa name: php_ex_12
+CREATE user 'user' IDENTIFIED BY 'pas';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
 
 CREATE DATABASE IF NOT EXISTS `php_ex_12`;
 

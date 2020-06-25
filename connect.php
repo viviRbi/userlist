@@ -4,18 +4,26 @@
     require_once "search_helper.php";
     require_once "paginator_helper.php";
 
-    $params = array (
-        'server' 	=> $DB_SERVER,
-		'username'	=> $DB_USENAME,
-		'password'	=> $DB_PASSWORD,
-		'database'	=> $DB_NAME,
-		'table'		=> $DB_TABLE,
+  //   $params = array (
+  //       'server' 	=> $DB_SERVER,
+		// 'username'	=> $DB_USENAME,
+		// 'password'	=> $DB_PASSWORD,
+		// 'database'	=> $DB_NAME,
+		// 'table'		=> $DB_TABLE,
+  //   );
+
+     $params = array (
+        'server'    => '103.68.68.143',
+        'username'  => 'hailan_zdemo',
+        'password'  => 'VclSCG[jT7g5',
+        'database'  => 'hailan_zdemo',
+        'table'     => 'users',
     );
 
     // If import data.sql to localhost
     
     // $params = array (
-    //     'server' 	=> "localhost",
+    //  'server' 	=> "localhost",
 	// 	'username'	=> "user",
 	// 	'password'	=> "",
 	// 	'database'	=> "php_ex_12",

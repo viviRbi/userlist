@@ -24,15 +24,16 @@ function orderList($query){
     global $type;
     if(isset($_GET[$query]) == "search"){
         $type = "search";
-        return $type;
+        return $type; 
     }
-    if(isset($_GET["$query-list"])){
+
+    elseif(isset($_GET["$query-list"])){
         if ($_GET["$query-list"] == 'asc'){
             $type = $query. "Asc";
         } elseif ($_GET["$query-list"] == 'desc') {
             $type = $query . "Desc";
         }
-        return $type;
+        return $type; 
     } 
 }
 
