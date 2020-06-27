@@ -4,14 +4,6 @@
     require_once "search_helper.php";
     require_once "paginator_helper.php";
 
-  //   $params = array (
-  //       'server' 	=> $DB_SERVER,
-		// 'username'	=> $DB_USENAME,
-		// 'password'	=> $DB_PASSWORD,
-		// 'database'	=> $DB_NAME,
-		// 'table'		=> $DB_TABLE,
-  //   );
-
      $params = array (
         'server'    => '103.68.68.143',
         'username'  => 'hailan_zdemo',
@@ -33,7 +25,6 @@
     $database = new Database($params);
 
     $list = $database->listRecord("SELECT * FROM `$params[table]` LIMIT $limitStart,$totalUsersPerPage");
-    // $status = $database->listRecord("SELECT DISTINCT `status` FROM `$params[table]`");
 
     $active = $database->listRecord("SELECT * FROM `$params[table]` WHERE `status` = 0 LIMIT $limitStart,$totalUsersPerPage");
     $inactive = $database->listRecord("SELECT * FROM `$params[table]` WHERE `status` = 1 LIMIT $limitStart,$totalUsersPerPage");
@@ -53,30 +44,4 @@
     $search = $database->listRecord("SELECT * FROM `$params[table]` WHERE `name` LIKE '%$searchWord%' LIMIT $limitStart,$totalUsersPerPage");
 
 
-
-
-
-
-
-    // TEST CHANGE INFO --------------------------------
-    // $database->setConnect(mysqli_connect('localhost','root',''));
-    // $database->setDatabase('php_ex_12');
-    // $database->setTable('users');
-    
-    //TEST INSERT --------------------------------------
-    // $database->insert($addin);
-    
-    //TEST UPDATE --------------------------------------
-    // $database->update($update, 20);
-    // echo $database->affected_row();
-
-    //TEST DELETE --------------------------------------
-    // $database->delete(2);
-    // $database->delete(array(16,17));
-    
-    //TEST SHOW ROWS
-    // $query = "SELECT * FROM `users` WHERE `id`> 12 ORDER BY id ASC";
-    // $database->listRecord($query);
-
-    // TEST COUNT RESULT
 ?>

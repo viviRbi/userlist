@@ -52,7 +52,7 @@
     <section>
         <p style="display:inline-block;"><strong>List Item</strong></p><input  type='checkbox' name='checkAll' onchange="checkAll(this)">
         &nbsp;&nbsp;<a href="<?php echo $FRONTEND?>/addUser.php">Add User</a>
-        <form name="bullActionForm" action="http://localhost/php_exe/php_ex_12/multi_action.php" method='post'>
+        <form name="bullActionForm" action='<?php echo $FRONTEND?>/multi_action.php' method='post'>
             <select name="bullaction" onchange="actionOption(this)">
                 <option value = "null">Choose action</option>
                 <option value = 0>Active</option>
@@ -110,7 +110,6 @@
             }
 
             ?>
-            <!-- <form id="form2" name='checkEachForm' action="http://localhost/php_exe/php_ex_12/multi_action.php" method='post'> -->
                 <?php echo usersList($type); ?>
             </form>
 

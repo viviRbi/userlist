@@ -1,8 +1,8 @@
 <?php 
     require_once "connect.php";
     require_once "status_helper.php";
-    print_r($_POST);
 
+  
     if(isset($_POST)){
         $action = $_POST['bullaction'];
         if($action == 'multi-delete'){
@@ -14,7 +14,7 @@
                 $database->update($updateToArr,$value);
             }
         }
-        header("Location: $FRONTEND/index.php");
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
   
 ?>
