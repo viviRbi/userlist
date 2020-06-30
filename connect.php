@@ -3,24 +3,14 @@
     require_once "Database.class.php";
     require_once "search_helper.php";
     require_once "paginator_helper.php";
-
-     $params = array (
-        'server'    => '103.68.68.143',
-        'username'  => 'hailan_zdemo',
-        'password'  => 'VclSCG[jT7g5',
-        'database'  => 'hailan_zdemo',
-        'table'     => 'users',
-    );
-
-    // If import data.sql to localhost
     
-    // $params = array (
-    //  'server' 	=> "localhost",
-	// 	'username'	=> "user",
-	// 	'password'	=> "",
-	// 	'database'	=> "php_ex_12",
-	// 	'table'		=> "users"
-    // );
+    $params = array (
+        'server' 	=> DB_HOST,
+		'username'	=> DB_USER,
+		'password'	=> DB_PASS,
+		'database'	=> DB_DB,
+		'table'		=> DB_TABLE
+    );
 
     $database = new Database($params);
 
