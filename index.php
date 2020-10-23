@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User List</title>
 
     <link href="style.css" rel="stylesheet" type="text/css">
 
@@ -25,12 +25,11 @@
 ?>
 <body>
     
-    <h2>Item Management</h2>
+    <h2>User Management</h2>
 
     <!-- Search and filter -->
     <section>
         <p><strong>Search and Filter</strong></p>
-
         <article id="statusFilter">
             <a href="<?php echo $FRONTEND?>">All(<?php echo $database->countResult(); ?>)</a>&nbsp;&nbsp;
             <?php statusFilterDisplay(); ?>
@@ -102,6 +101,7 @@
             orderList("id");
             orderList("name");
             orderList("order");
+            orderList("status");
       
             if (isset($_GET['search'])){
                 orderList("search");

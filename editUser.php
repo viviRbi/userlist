@@ -1,6 +1,8 @@
 
 <?php 
+    require_once "define.php";
     require_once "connect.php";
+    
 ?>
 
 <!DOCTYPE html>
@@ -41,10 +43,10 @@
         $updateData = $_POST;
         if($name){
             $database->update($updateData,$id);
-            header("Location: http://localhost/php_exe/php_ex_12/index.php");
+            header("Location: $FRONTEND/index.php");
         }
         
-        header("Location: http://localhost/php_exe/php_ex_12/index.php");
+        header("Location: $FRONTEND/index.php");
     }
 ?>
 
@@ -69,7 +71,7 @@
         <input type="submit" value = "Submit">
     </form>
     <?php echo $_POST>0? "Edit success": ""; echo "</br>"?>
-    <a href="http://localhost/php_exe/php_ex_12/index.php">Back</a>
+    <a href="$FRONTEND/index.php">Back</a>
 
 </body>
 

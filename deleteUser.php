@@ -1,4 +1,5 @@
 <?php 
+    require_once "define.php";
     require_once "connect.php";
 ?>
 <!DOCTYPE html>
@@ -17,10 +18,10 @@
         $id = mysqli_real_escape_string($database->getConnect(),$id); 
         if($id){
             $database->delete($id);
-            header("Location: http://localhost/php_exe/php_ex_12/index.php");
+            header("Location: $FRONTEND/index.php");
         }
     }else{
-        echo "Unsuccessful. Please go back to <a href='http://localhost/php_exe/php_ex_12/index.php'>Home page</a>";
+        echo "Unsuccessful. Please go back to <a href='$FRONTEND'>Home page</a>";
     }
 ?>
 </body>

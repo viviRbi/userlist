@@ -1,6 +1,7 @@
 
 <?php 
     session_start();
+    require_once "define.php";
     require_once "connect.php";
 ?>
 
@@ -32,7 +33,7 @@
         }
         
         $database->insert($insertInfo);
-        // header('Location: http://localhost/php_exe/php_ex_12/index.php');
+        header("Location: $FRONTEND"."/index.php");
     }
 
     if(isset($_SESSION['user'])){
@@ -40,7 +41,6 @@
             $$key = $value;
         }
     }
-    echo $status;
 ?>
 
     <h2>Add Page</h2>
@@ -61,7 +61,7 @@
         <input type="submit" value = "Submit">
     </form>
   
-    <a href="http://localhost/php_exe/php_ex_12/index.php">Back</a>
+    <a href="<?php echo $FRONTEND?>">Back </a>
     <?php echo $message ?>
 
 </body>
