@@ -4,13 +4,6 @@
     require_once "search_helper.php";
     require_once "paginator_helper.php";
     
-    $params = array (
-        'server' 	=> DB_HOST,
-		'username'	=> DB_USER,
-		'password'	=> DB_PASS,
-		'database'	=> DB_DB,
-		'table'		=> DB_TABLE
-    );
 
     $database = new Database($params);
 
